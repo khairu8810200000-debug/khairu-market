@@ -27,14 +27,18 @@ function App(){
     <div className="affiliate-intro">
       <p className="affiliate-label">SHOPEE MALAYSIA</p>
       <h1 id="affiliate-heading">Pilihan Shopee<br />Khairu Market</h1>
-      <p>Terokai pilihan kedai atau buka pautan produk untuk menyemak harga dan stok semasa di Shopee.</p>
+      <p>Terokai pilihan kedai atau pilih pautan produk untuk menyemak harga dan stok semasa di Shopee.</p>
       <a className="affiliate-button" href="https://collshp.com/bffctlqam?view=storefront" target="_blank" rel="noopener noreferrer sponsored">Terokai kedai Shopee ↗</a>
     </div>
     <article className="affiliate-product">
       <p className="affiliate-label">PAUTAN PRODUK</p>
       <h2>Pilihan di Shopee</h2>
       <p>Butiran produk dan harga semasa boleh dilihat di Shopee.</p>
-      <a href="https://s.shopee.com.my/9AQ7ybUJfd" target="_blank" rel="noopener noreferrer sponsored">Lihat produk di Shopee ↗</a>
+      <ul>
+        <li><a href="https://s.shopee.com.my/9AQ7ybUJfd" target="_blank" rel="noopener noreferrer sponsored">Lihat produk 1 di Shopee ↗</a></li>
+        <li><a href="https://s.shopee.com.my/8VARUt0xdv" target="_blank" rel="noopener noreferrer sponsored">Lihat produk 2 di Shopee ↗</a></li>
+        <li><a href="https://s.shopee.com.my/3B8v98XJwH" target="_blank" rel="noopener noreferrer sponsored">Lihat produk 3 di Shopee ↗</a></li>
+      </ul>
     </article>
     <p className="affiliate-disclosure">Khairu Market mungkin menerima komisen untuk pembelian yang layak melalui pautan affiliate.</p>
   </section>
