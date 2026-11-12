@@ -6,8 +6,7 @@
 <meta name="theme-color" content="#147d55">
 <title>Khairu Market — Jual Beli Malaysia</title>
 <style>
-#startup-status{font-family:system-ui,Arial,sans-serif;background:#e9f7ef;color:#145c3c;padding:20px;margin:18px auto;max-width:680px;border-radius:14px}
-#startup-status a{color:#086b47}#startup-status button{padding:12px 16px;background:#087b50;color:#fff;border:0;border-radius:8px}
+body{margin:0;font-family:system-ui,Arial,sans-serif}#startup-status{max-width:1180px;margin:auto;padding:0 18px}
 
 .affiliate{display:grid;grid-template-columns: minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:center;margin:24px 0;padding:clamp(22px,5vw,52px);border-radius:24px;background:#fff1e4;color:#38190d}
 .affiliate h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1.04;letter-spacing:-.055em;margin:.3em 0}
@@ -19,20 +18,25 @@
 .affiliate-disclosure{grid-column:1/-1;font-size:.85rem;color:#683c2b;margin:0}
 @media(max-width:640px){.affiliate{grid-template-columns:1fr;gap:18px}}
 </style>
-<script>
-window.__khairuBooted=false;
-window.addEventListener('error',function(e){var s=document.getElementById('startup-status');if(s){s.style.display='block';s.innerHTML='<strong>Khairu Market: masalah memuatkan aplikasi.</strong><p id="startup-error"></p><a href="./semak.html">Semak sambungan website</a>';document.getElementById('startup-error').textContent=e.message||'Ralat JavaScript';}});
-window.addEventListener('unhandledrejection',function(e){var s=document.getElementById('startup-status');if(s&&!window.__khairuBooted){s.style.display='block';s.textContent='Khairu Market gagal dimuatkan: '+String(e.reason?.message||e.reason||'Ralat tidak diketahui');}});
-</script>
 </head>
 <body>
-<div id="startup-status">
-<strong>Khairu Market</strong>
-<p><a href="https://collshp.com/bffctlqam?view=storefront" rel="sponsored">Terokai kedai Shopee</a></p>
-<p>Website sedang dimuatkan. Jika paparan tidak berubah, tekan Muat Semula atau buka halaman ujian.</p>
-<button onclick="location.reload()">Muat Semula</button>
-<p><a href="./semak.html">Buka halaman ujian</a></p>
-</div>
+<main id="startup-status">
+<section class="affiliate" aria-labelledby="affiliate-fallback-heading">
+  <div class="affiliate-intro">
+    <p class="affiliate-label">SHOPEE MALAYSIA</p>
+    <h1 id="affiliate-fallback-heading">Pilihan Shopee<br>Khairu Market</h1>
+    <p>Terokai pilihan kedai atau buka pautan produk untuk menyemak harga dan stok semasa di Shopee.</p>
+    <a class="affiliate-button" href="https://collshp.com/bffctlqam?view=storefront" target="_blank" rel="noopener noreferrer sponsored">Terokai kedai Shopee ↗</a>
+  </div>
+  <article class="affiliate-product">
+    <p class="affiliate-label">PAUTAN PRODUK</p>
+    <h2>Pilihan di Shopee</h2>
+    <p>Butiran produk dan harga semasa boleh dilihat di Shopee.</p>
+    <a href="https://s.shopee.com.my/9AQ7ybUJfd" target="_blank" rel="noopener noreferrer sponsored">Lihat produk di Shopee ↗</a>
+  </article>
+  <p class="affiliate-disclosure">Khairu Market mungkin menerima komisen untuk pembelian yang layak melalui pautan affiliate.</p>
+</section>
+</main>
 <div id="root"></div>
 <script type="module" src="/src/main.jsx"></script>
 </body>
