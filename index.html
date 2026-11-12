@@ -8,6 +8,16 @@
 <style>
 #startup-status{font-family:system-ui,Arial,sans-serif;background:#e9f7ef;color:#145c3c;padding:20px;margin:18px auto;max-width:680px;border-radius:14px}
 #startup-status a{color:#086b47}#startup-status button{padding:12px 16px;background:#087b50;color:#fff;border:0;border-radius:8px}
+
+.affiliate{display:grid;grid-template-columns: minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:center;margin:24px 0;padding:clamp(22px,5vw,52px);border-radius:24px;background:#fff1e4;color:#38190d}
+.affiliate h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1.04;letter-spacing:-.055em;margin:.3em 0}
+.affiliate h2{margin:.35em 0}.affiliate p{max-width:50ch}
+.affiliate-label{font-size:.75rem;font-weight:800;letter-spacing:.14em;color:#8c3a1e}
+.affiliate-product{padding:24px;border-radius:16px;background:#fffaf6;border:1px solid #f1cfbc}
+.affiliate-product a{color:#87361b;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.affiliate-button{display:inline-block;background:#a33c19;color:#fff!important;border-radius:10px;padding:12px 18px;text-decoration:none;font-weight:750}
+.affiliate-disclosure{grid-column:1/-1;font-size:.85rem;color:#683c2b;margin:0}
+@media(max-width:640px){.affiliate{grid-template-columns:1fr;gap:18px}}
 </style>
 <script>
 window.__khairuBooted=false;
@@ -17,7 +27,8 @@ window.addEventListener('unhandledrejection',function(e){var s=document.getEleme
 </head>
 <body>
 <div id="startup-status">
-<strong>🛍️ Khairu Market</strong>
+<strong>Khairu Market</strong>
+<p><a href="https://collshp.com/bffctlqam?view=storefront" rel="sponsored">Terokai kedai Shopee</a></p>
 <p>Website sedang dimuatkan. Jika paparan tidak berubah, tekan Muat Semula atau buka halaman ujian.</p>
 <button onclick="location.reload()">Muat Semula</button>
 <p><a href="./semak.html">Buka halaman ujian</a></p>
