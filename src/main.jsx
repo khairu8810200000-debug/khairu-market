@@ -10,6 +10,7 @@ const rm=n=>new Intl.NumberFormat('ms-MY',{style:'currency',currency:'MYR'}).for
 function App(){
  const[session,setSession]=useState(null),[items,setItems]=useState(db?[]:demo),[page,setPage]=useState('home'),[query,setQuery]=useState(''),[cat,setCat]=useState('Semua'),[selected,setSelected]=useState(null),[error,setError]=useState(''),[busy,setBusy]=useState(false),[email,setEmail]=useState(''),[password,setPassword]=useState(''),[register,setRegister]=useState(false),[saved,setSaved]=useState(()=>{try{const v=JSON.parse(localStorage.getItem('khairu_saved')||'[]');return Array.isArray(v)?v:[]}catch{return []}}),[form,setForm]=useState({title:'',price:'',category:'Elektronik',location:'',description:'',phone:'',image:null});
  async function refresh(){if(!db)return;const{data,error}=await db.from('listings').select('*').eq('status','active').order('created_at',{ascending:false});if(error)setError(error.message);else setItems(data||[])}
+ useEffect(()=>{window.__khairuBooted=true;const status=document.getElementById('startup-status');if(status)status.style.display='none';},[]);
  useEffect(()=>{if(!db)return;db.auth.getSession().then(({data})=>setSession(data.session));const{data:{subscription}}=db.auth.onAuthStateChange((_,s)=>setSession(s));refresh();return()=>subscription.unsubscribe()},[]);
  useEffect(()=>{try{localStorage.setItem('khairu_saved',JSON.stringify(saved))}catch(e){console.warn('Saved items unavailable',e)}},[saved]);
  function go(p){setPage(p);setError('');setSelected(null)}
